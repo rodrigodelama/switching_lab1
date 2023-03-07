@@ -4,7 +4,6 @@
 #include "main.h"
 #include "utils.h"
 #include "io.h"
-#include "tables.h"
 
 int main (int argc, char *argv[]) //argv[1] routing file argv[2] test file
 {
@@ -33,21 +32,6 @@ if(init != 0)
 	printIOExplanationError(init);
 	return -1;
 }
-    /*
-    
-        USE:
-                ./my_route_lookup <routingTable> <inputFile>
-
-        WHERE:
-                <routingTable>
-                        The path for the file containing the routing table
-                <inputFile>
-                        The path for the input file
-    */
-
-
-    // my_route_lookup <FIB FILE>                   <INPUT FILE>
-    //                 routing_table_simple.txt     prueba0.txt
 
     printf("Hello World!\n");
     return 0;
