@@ -1,19 +1,20 @@
-1.  Define a structure (struct) to represent each node for the best
+Rodrigo De Lama - 100451775
+Jaime Mato - 100451639
 
-2.  Index our
+1.  Filter input files and potential format errors
 
-2.  Define a function to insert a node into the binary search tree
-        a. If the tree is empty, create a new node with the given prefix and subnet and set it as the root
-        b. Otherwise, traverse the tree and insert the node as a child of the appropriate parent node
+2.  Define a structure (struct) to represent our tables data type
 
-3.  Define a function to search for the best route for a given IP address
-        a. Convert the IP address to binary form
-        b. Traverse the binary search tree and compare the prefix of each node to the subnet of the given IP address
-        c. Keep track of the longest matching prefix found so far
-        d. Return the prefix with the longest match as the best route
+3.  Create our binary tables, TBL24 with 2^24 entries and TBLlong with 2^8 entries (expandable by N)
 
-4.  Define a function to convert a decimal number to a binary string
-    In the main function:
-        a. Create a binary search tree with some example routes
-        b. Test the search function with some example IP addresses
-        c. Free the memory used by the binary search tree using a post-order traversal.
+4.  Read from "route_table.txt" and obtain the prefix and output interface. We
+    will insert the entries recovered into their corresponding slots in the table
+
+5.  Read from "pruebaX.txt" and obain the IP adress
+
+6.  Search for the Longest Prefix Match inside our tables and figure out the output interface
+        a. Check for default interface, return interface
+        b. Check in TBL24 (first table) if our 1st bit of the output interface is 0, return interface
+        c. Else check in TBLlong (second table) and figure out our position, return interface
+
+7.  Free the memory for IO and our tables
