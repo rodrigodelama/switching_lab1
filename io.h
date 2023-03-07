@@ -8,7 +8,6 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-
 /********************************************************************
  * Constant definitions
  ********************************************************************/
@@ -30,7 +29,6 @@
  ***********************************************************************/
 void tee(FILE *f, char const *fmt, ...);
 
-
 /***********************************************************************
  * Initalize file descriptors
  *
@@ -40,18 +38,15 @@ void tee(FILE *f, char const *fmt, ...);
  ***********************************************************************/
 int initializeIO(char *routingTableName, char *inputFileName);
 
-
 /***********************************************************************
  * Close the input/output files
  ***********************************************************************/
 void freeIO();
 
-
 /***********************************************************************
  * Write explanation for error identifier (verbose mode)
  ***********************************************************************/
 void printIOExplanationError(int result);
-
 
 /***********************************************************************
  * Read one entry in the FIB
@@ -62,7 +57,6 @@ void printIOExplanationError(int result);
  ***********************************************************************/
 int readFIBLine(uint32_t *prefix, int *prefixLength, int *outInterface);
 
-
 /***********************************************************************
  * Read one entry in the input packet file
  *
@@ -71,7 +65,6 @@ int readFIBLine(uint32_t *prefix, int *prefixLength, int *outInterface);
  *
  ***********************************************************************/
 int readInputPacketFileLine(uint32_t *IPAddress);
-
 
 /***********************************************************************
  * Print a line to the output file
@@ -84,9 +77,8 @@ int readInputPacketFileLine(uint32_t *IPAddress);
  * the number of hash tables that have been accessed for every IP address
  *
  ***********************************************************************/
- void printOutputLine(uint32_t IPAddress, int outInterface, struct timespec *initialTime, struct timespec *finalTime,
-                        double *searchingTime, int numberOfTableAccesses);
-
+//void printOutputLine(uint32_t IPAddress, int outInterface, struct timespec *initialTime, struct timespec *finalTime, double *searchingTime, int numberOfTableAccesses);
+void printOutputLine(uint32_t IPAddress, int outInterface, struct timespec *initialTime, struct timespec *finalTime, double *searchingTime, int numberOfTableAccesses);
 
 /***********************************************************************
  * Print execution summary to the output file
@@ -100,7 +92,6 @@ int readInputPacketFileLine(uint32_t *IPAddress);
  ***********************************************************************/
 void printSummary(int processedPackets, double averageTableAccesses, double averagePacketProcessingTime);
 
-
 /***********************************************************************
  * Print memory and CPU time
  *
@@ -108,5 +99,3 @@ void printSummary(int processedPackets, double averageTableAccesses, double aver
  *
  ***********************************************************************/
 void printMemoryTimeUsage();
-
-//RL Lab 2020 Switching UC3M
