@@ -1,5 +1,5 @@
 SRC = my_route_lookup.c io.c io.h utils.c utils.h
-CFLAGS = -Wall -g #test with -O3 before delivery
+CFLAGS = -Wall -O3 #test with -O3 before delivery
 
 # set to -g instead of -O3 if we want a less restrictive compilation while 
 

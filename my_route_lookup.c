@@ -1,9 +1,8 @@
 //Rodrigo De Lama - 100451775
 //Jaime Mato - 100451639
 
-#include "main.h"
-#include "utils.h"
 #include "io.h"
+#include "tables.h"
 
 int main (int argc, char *argv[]) //argv[1] routing file argv[2] test file
 {
