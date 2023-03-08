@@ -7,14 +7,17 @@ Jaime Mato - 100451639
 
 3.  Create our binary tables, TBL24 with 2^24 entries and TBLlong with 2^8 entries (expandable by N)
 
-4.  Read from "route_table.txt" and obtain the prefix and output interface. We
-    will insert the entries recovered into their corresponding slots in the table
+4.  Read from "route_table.txt" and obtain the prefix and output interface. We will insert the entries
+    recovered into their corresponding slots in the tables. If the mask is lower than 24bits we will insert it
+    in TBL24, if longer into TBLlong
 
-5.  Read from "pruebaX.txt" and obain the IP adress
 
-6.  Search for the Longest Prefix Match inside our tables and figure out the output interface
-        a. Check for default interface, return interface
-        b. Check in TBL24 (first table) if our 1st bit of the output interface is 0, return interface
-        c. Else check in TBLlong (second table) and figure out our position, return interface
+5.  In a loop:
+        a. Read from "pruebaX.txt" and obain the IP adressess
+
+        b. Search for the Longest Prefix Match inside our tables and figure out the output interface
+                i. Check for default interface, return interface
+                ii. Check in TBL24 (first table) if our 1st bit of the output interface is 0, return interface
+                iii. Else check in TBLlong (second table) and figure out our position, return interface
 
 7.  Free the memory for IO and our tables
