@@ -1,6 +1,8 @@
 Rodrigo De Lama - 100451775
 Jaime Mato - 100451639
 
+Binary Search Tree Algorithm
+
 1.  Filter input files and potential format errors
 
 2.  Define a structure (struct) to represent our tables data type
